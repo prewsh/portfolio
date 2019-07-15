@@ -16,13 +16,26 @@ body{
     align-items: baseline;
     background: transparent;
     height: 50px;
+    max-height: 50px;
     padding: 10px;
     color: antiquewhite;
 }
 
 .header>div{
-    width: 50%;
-    margin-top: 10px;
+    width: 70%;
+    margin-top: 0px;
+}
+
+.logo{
+    font-family: 'Dancing Script', cursive; 
+    padding-left: 5%; 
+    width: 30%;
+}
+
+
+/* Hide Hamburger */
+.contacts label, #hamburger {
+    display: none;
 }
 
 
@@ -31,9 +44,15 @@ body{
     list-style-type: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding: 30px 2px;
 }
 
-.thirdpart{
+#page-nav > ul> a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#portfolio{
     background-color:white;
     padding: 30px;
     margin: 40px;
@@ -48,6 +67,8 @@ body{
 .images> div{
     width: 260px;
     height: 370px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 
@@ -58,44 +79,39 @@ body{
 }
 
 .textonbg{
-    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)),
     url(../sissors.jpg);
     background-size: cover;
     padding: 80px;
     width: 100%;
-    height: 70vh;
+    height: 100%;
 }
 
-.textonbg p{
-    width: 200px;
+.textonbg h1{
+    width: 100%;
     height: 60px;
+    text-align: center;
 }
 
-.secondpart{
-    background-image: url(../beth-tate-a6FNJKMreCc-unsplash.jpg);
+#home{
+    background-image: url(../header.jpg);
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin-bottom: 10px;
 }
 
-/*.secondpart>h1{
-    color: beige;
-    font-size: 100px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 80px;
-    border: 6px solid red;
-}*/
-
 .boldtext{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
     text-align: center;
+    max-width: 80%;
     color: azure;
-    font-size: 30px;
-    margin-top: 5px;
+    font-size: 200%;
+    margin: 20px auto;
 }
 
 .boldtext > h1{
@@ -103,25 +119,128 @@ body{
     color: blanchedalmond;
     font-family: cursive;
     font-weight: 900;
-    font-size: 100px;
-    margin-top: 70px;
+    font-size: 80px;
+    margin-top: 20px;
 }
 
-.footer{
+.profileimg > img{
+    height: 300px; 
+    width: 250px; 
+    border-radius: 50%; 
+    margin-top: 30px; 
+}
+
+.work{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#footer{
     background-color: white;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     padding: 40px;
 }
 
-.footer> .top{
+#footer> .top{
     margin: 40px;
 }
 
-.footer .bottom{
+#footer .bottom{
     margin: 40px;
 }
 
-.footer>div>p{
+#footer>div>p{
     padding:30px;
+}
+
+.bottom>div>i{
+    font-size: 50px;
+    padding: 10px;
+}
+
+.backup> a> i{ 
+    font-size: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    color: black;
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+    /* Show Hamburger */
+    #page-nav label {
+      display: inline-block;
+      color: #fff;
+      background: #a02620;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+
+    }
+
+      /* Break down menu items into vertical */
+  #page-nav ul li {
+    display: block;
+  }
+  #page-nav ul li {
+    border-top: 1px solid #333;
+  }
+
+    /* Toggle show/hide menu on checkbox click */
+    #page-nav ul {
+        display: none;
+      }
+      #page-nav input:checked ~ ul {
+        display: block;
+      }
+
+      #home{
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+      }
+
+      #home>div{
+          width: 100%;
+      }
+
+      .boldtext > h1{
+        text-align: center;
+        color: blanchedalmond;
+        font-family: cursive;
+        font-weight: 900;
+        font-size: 50px;
+        margin-top: 20px;
+    }
+
+    .boldtext{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+        max-width: 80%;
+        color: azure;
+        font-size: 20px;
+        margin: 20px auto;
+    }
+
+    .profileimg> img{
+        width: 120px;
+        height: 150px;
+    }
+
+    .images> div{
+        margin-top: 40px;
+    }
+
+    .work> div{
+        margin-top: 40px;
+    }
 }
