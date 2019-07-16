@@ -54,7 +54,7 @@ body{
 
 /* competence level */
 
-/* .progress{
+ .progress{
     width: 800px;
     margin: 0 auto;
     background-color: aqua;
@@ -77,11 +77,11 @@ line{
     margin: 0 auto 10px;
     line-height: 25px;
     font-size: 45px;
-    /* background-color: yellow; */
-    /* padding: 0 0 0 10px;
-    position: relative; */
-} */
-/* 
+    background-color: yellow; */
+    padding: 0 0 0 10px;
+    position: relative;
+}
+
 .line::before{
     content: '';
     width: 100%;
@@ -105,15 +105,15 @@ line{
     top: 0;
     left: 0;
     z-index: -1;
-} */
-/* 
+}
+
 .line1::after{
     max-width: 90%;
 }
 
 .line2::after{
 
-} */
+}
 
 
 .Text1{
