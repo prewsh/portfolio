@@ -15,6 +15,15 @@ body{
 .navbar{
     color: white;
     display: flex;
+    padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+
+.navbar div h1{
+    padding-left: 3px;
 }
 
 .spacer{
@@ -52,69 +61,122 @@ body{
     margin-top: 10px;
 }
 
-/* competence level */
+#competence{
+    width: 100%;
+    border-top: 0.5px solid gray;
+    border-bottom: 1px solid gray;
+}
 
- .progress{
-    width: 800px;
-    margin: 0 auto;
-    background-color: aqua;
+.progress{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 30px;
 }
 
 .progress h1{
     text-align: center;
-    text-transform: uppercase;
-    margin: 20px;
 }
 
-.progress h2{
-    text-align: left;
-    background-color: blue;
-}
-
-line{
-    height: 25px;
-    min-width: 800px;
-    margin: 0 auto 10px;
-    line-height: 25px;
-    font-size: 45px;
-    background-color: yellow; */
-    padding: 0 0 0 10px;
-    position: relative;
-}
-
-.line::before{
-    content: '';
-    width: 100%;
-    position: absolute;
-    height: 25px;
-    left: 0;
-    top: 0;
-    z-index: -2;
-    background: blue;
-}
-
-.line::after{
-    content: '';
-    background: red;
-    height: 25px;
-    transition: 0.8s;
+.progress>h3>span{
     display: block;
-    width: 100%;
-    animation: animate 1 4s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
-.line1::after{
-    max-width: 90%;
+.progress> div>h3{
+    margin-left:100px;
+    margin-top: 20px;
 }
 
-.line2::after{
-
+.p-bar{
+    background-color: rgba(194,191,191,0.541);
+    display: block;
+    height: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-left: 100px;
+    width: 400px;
 }
 
+.p-bar span{
+    height: 30px;
+    float: left;
+    background-color: #9b3f3f;
+}
+
+.html{
+    width: 90%;
+    animation: html 2s;
+}
+
+.css{
+    width: 75%;
+    animation: css 2s;
+}
+
+.javascript{
+    width: 40%;
+    animation: javascript 2s;
+}
+
+.Java{
+    width: 50%;
+    animation: Java 2s;
+}
+
+.Digital-Marketing{
+    width: 78%;
+    animation: Digital-Marketing 2s;
+}
+
+@keyframes html{
+     0%{
+         width: 0%;
+     }
+    100%{
+        width:90%;
+    }     
+}  
+
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+   100%{
+       widows: 50%;
+   }     
+}  
+
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+   100%{
+       width:40%;
+   }     
+} 
+
+@keyframes Java{
+    0%{
+        width: 0%;
+    }
+   100%{
+       width:50%%;
+   }     
+}  
+
+@keyframes Digital-Marketing{
+    0%{
+        width: 0%;
+    }
+   100%{
+       width:78%;
+   }     
+}  
 
 .Text1{
     text-align: center;
@@ -214,7 +276,7 @@ line{
     color: black;
 }
 
-/* [ON SMALL SCREENS] */
+/* ON SMALL SCREENS */
 @media screen and (max-width: 768px){
     /* Show Hamburger */
     .navbar label {
@@ -299,4 +361,21 @@ line{
     .work> div{
         margin-top: 40px;
     }
+    .progress{
+        width: 100%;
+    }
+    #competence{
+        width: 100%;
+    }
+    .p-bar{
+        background-color: rgba(194,191,191,0.541);
+        display: block;
+        height: 20px;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-left: 2px;
+        margin-right: 2px;
+        width: 100%;
+    }
+    
 }
