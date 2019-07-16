@@ -8,48 +8,29 @@ body{
     font-family: 'Noto Serif', serif;
 }
 
-.header{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: baseline;
-    background: transparent;
-    height: 50px;
-    max-height: 50px;
-    padding: 10px;
-    color: antiquewhite;
-}
-
-.header>div{
-    width: 70%;
-    margin-top: 0px;
-}
-
-.logo{
-    font-family: 'Dancing Script', cursive; 
-    padding-left: 5%; 
-    width: 30%;
-}
-
-
-/* Hide Hamburger */
-.contacts label, #hamburger {
+.navbar label, #hamburger{
     display: none;
 }
 
-
-.contacts ul {
+.navbar{
+    color: white;
     display: flex;
-    list-style-type: none;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 30px 2px;
 }
 
-#page-nav > ul> a{
+.spacer{
+    flex: 1;
+}
+
+.navbar ul a{
+    list-style: none;
     text-decoration: none;
-    color: #fff;
+    color: white;
+    padding: 0px 30px;
+}
+
+.navbar ul{
+    display: flex;
+    padding: 0px 30px;
 }
 
 #portfolio{
@@ -70,6 +51,69 @@ body{
     text-align: center;
     margin-top: 10px;
 }
+
+/* competence level */
+
+/* .progress{
+    width: 800px;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+.progress h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.progress h2{
+    text-align: left;
+    background-color: blue;
+}
+
+line{
+    height: 25px;
+    min-width: 800px;
+    margin: 0 auto 10px;
+    line-height: 25px;
+    font-size: 45px;
+    /* background-color: yellow; */
+    /* padding: 0 0 0 10px;
+    position: relative; */
+} */
+/* 
+.line::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 25px;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    background: blue;
+}
+
+.line::after{
+    content: '';
+    background: red;
+    height: 25px;
+    transition: 0.8s;
+    display: block;
+    width: 100%;
+    animation: animate 1 4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
+/* 
+.line1::after{
+    max-width: 90%;
+}
+
+.line2::after{
+
+} */
 
 
 .Text1{
@@ -173,30 +217,41 @@ body{
 /* [ON SMALL SCREENS] */
 @media screen and (max-width: 768px){
     /* Show Hamburger */
-    #page-nav label {
+    .navbar label {
       display: inline-block;
       color: #fff;
-      background: #a02620;
       font-style: normal;
-      font-size: 1.2em;
+      font-size: 1.5em;
       padding: 10px;
-
     }
 
       /* Break down menu items into vertical */
-  #page-nav ul li {
+  
+  .navbar ul li {
     display: block;
-  }
-  #page-nav ul li {
-    border-top: 1px solid #333;
   }
 
     /* Toggle show/hide menu on checkbox click */
-    #page-nav ul {
+    .navbar ul {
         display: none;
       }
-      #page-nav input:checked ~ ul {
+
+      .navbar input:checked ~ ul {
         display: block;
+      }
+
+      .navbar{
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          width: 100%;
+          top: 1px;
+          left: 3px;
+          background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .navbar div h1{
+          text-align: center;
       }
 
       #home{
@@ -215,7 +270,7 @@ body{
         font-family: cursive;
         font-weight: 900;
         font-size: 50px;
-        margin-top: 20px;
+        margin-top: 15px;
     }
 
     .boldtext{
@@ -228,12 +283,13 @@ body{
         max-width: 80%;
         color: azure;
         font-size: 20px;
-        margin: 20px auto;
+        margin: 17px auto;
     }
 
     .profileimg> img{
         width: 120px;
         height: 150px;
+        margin-top: 55px;
     }
 
     .images> div{
